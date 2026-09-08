@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-pitch-950 text-chalk-100 font-body;
+}
+
+::selection {
+  @apply bg-turf-500/40;
+}
+
+/* Focus visible clair pour l'accessibilité clavier */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid theme('colors.flood.400');
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
